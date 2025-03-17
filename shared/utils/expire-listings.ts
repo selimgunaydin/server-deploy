@@ -1,9 +1,9 @@
-import { db } from "../../shared/db";
+import { db } from "../../shared/db.js";
 import { eq, lt, and, gte, lte } from "drizzle-orm";
-import { listings } from "../../shared/schemas";
+import { listings } from "../../shared/schemas.js";
 
-import { Listing } from "../../shared/schema";
-import { sendExpirationEmail, sendExpirationWarningEmail } from "../../shared/services/expiration-notification";
+import { Listing } from "../../shared/schemas.js";
+import { sendExpirationEmail, sendExpirationWarningEmail } from "../../shared/services/expiration-notification.js";
 
 // Helper to convert DB Listing to Email Listing interface
 function adaptListingForEmail(dbListing: any): any {

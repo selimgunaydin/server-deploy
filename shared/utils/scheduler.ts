@@ -1,7 +1,7 @@
 import {
   deactivateExpiredListings,
   checkExpirationWarnings,
-} from "./expire-listings";
+} from "./expire-listings.js";
 
 // Her gün çalışacak kontrol fonksiyonu
 export async function runDailyTasks() {

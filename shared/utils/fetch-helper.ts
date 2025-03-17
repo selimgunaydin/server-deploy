@@ -17,7 +17,6 @@ export async function safeFetch<T>(
     const res = await fetch(url, {
       ...options,
       cache: 'no-store',
-      next: { revalidate: 0 },
     });
 
     if (!res.ok) {

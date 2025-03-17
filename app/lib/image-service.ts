@@ -8,10 +8,10 @@ import {
   isAllowedFileSize,
   ALLOWED_IMAGE_TYPES,
   FILE_SIZE_LIMITS,
-} from "./file-constants";
+} from "./file-constants.js";
 import multer from "multer";
 import sharp from "sharp";
-import { r2Client } from "./r2";
+import { r2Client } from "./r2.js";
 
 const ALLOWED_MEDIA_TYPES = [
   "audio/mpeg",

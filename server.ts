@@ -1,12 +1,12 @@
 import { Server, Socket } from "socket.io";
-import { db, schema } from "./shared/db"; // .js uzantısını ekleyelim
-import { messages, conversations } from "./shared/schemas"; // .js uzantısını ekleyelim
+import { db, schema } from "./shared/db.js"; // .js uzantısını ekleyelim
+import { messages, conversations } from "./shared/schemas.js"; // .js uzantısını ekleyelim
 import { eq } from "drizzle-orm";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
-import { storage } from "./app/lib/storage";
-import { containsBadWords } from './shared/utils';
-import { runDailyTasks } from './shared/utils/scheduler';
+import { storage } from "./app/lib/storage.js";
+import { containsBadWords } from './shared/utils.js';
+import { runDailyTasks } from './shared/utils/scheduler.js';
 // .env dosyasını yükle
 dotenv.config();
 

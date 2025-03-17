@@ -1,4 +1,4 @@
-import { badWords } from './bad-words';
+import { badWords } from './bad-words.js';
 
 /**
  * Verilen metinde kötü sözcük kontrolü yapar

@@ -9,8 +9,11 @@ RUN npm install
 # Uygulama dosyalarını kopyala
 COPY . .
 
+# TypeScript derle
+RUN npm run build
+
 # Uygulama portunu belirt
 EXPOSE 3001
 
-# Uygulamayı başlat
-CMD ["npm", "start"] 
+# Uygulamayı başlat - dist klasöründen çalıştır
+CMD ["node", "dist/server.js"] 
