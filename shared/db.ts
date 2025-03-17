@@ -1,6 +1,6 @@
 import { Pool, neonConfig } from '@neondatabase/serverless';
 import { drizzle } from 'drizzle-orm/neon-serverless';
-import * as schema from "@shared/schemas";
+import * as schema from "../shared/schemas";
 import { config } from 'dotenv';
 import { fileURLToPath } from "url";
 import { dirname } from "path";
