@@ -163,7 +163,7 @@ io.on("connection", (socket: SocketWithAuth) => {
           const [newMessage] = await db
             .insert(messages)
             .values({
-              conversationId: parseInt(conversation.id),
+              conversationId: conversation.id,
               senderId: parseInt(socket.userId),
               receiverId: receiverId,
               content,
@@ -207,18 +207,18 @@ io.on("connection", (socket: SocketWithAuth) => {
           );
           console.log("Yeni konuşma oluşturuldu:", conversation);
           console.log("Yeni mesaj oluşturuluyor:", {
-            conversationId: parseInt(conversation.id),
-            senderId: parseInt(conversation.senderId),
-            receiverId: parseInt(conversation.receiverId),
+            conversationId: conversation.id,  
+            senderId: conversation.senderId,
+            receiverId: conversation.receiverId,
             content,
             files,
           });
           const [newMessage] = await db
             .insert(messages)
             .values({
-              conversationId: parseInt(conversation.id),
-              senderId: parseInt(conversation.senderId),
-              receiverId: parseInt(conversation.receiverId),
+              conversationId: conversation.id,
+              senderId: conversation.senderId,
+              receiverId: conversation.receiverId,
               content,
               files,
               createdAt: new Date(),
